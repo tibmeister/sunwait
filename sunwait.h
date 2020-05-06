@@ -21,52 +21,54 @@
 #define     SET 1111111
 
 typedef enum
-{ ONOFF_ON
-, ONOFF_OFF
+{
+	ONOFF_ON
+	, ONOFF_OFF
 } OnOff;
 
 typedef struct
-{ 
-  double        latitude;            // Degrees N - Global position
-  double        longitude;           // Degrees E - Global position
+{
+	double        latitude;            // Degrees N - Global position
+	double        longitude;           // Degrees E - Global position
 
-  double        offsetHour;          // Unit: Hours. Adjust sunrise or sunset by this amount, towards midday.
-  double        twilightAngle;       // Degrees. -ve = below horizon. Twilight angle requested by user.
+	double        offsetHour;          // Unit: Hours. Adjust sunrise or sunset by this amount, towards midday.
+	double        twilightAngle;       // Degrees. -ve = below horizon. Twilight angle requested by user.
 
-  time_t        nowTimet;            // Time this program is run
-  time_t        targetTimet;         // Midnight (00:00am) UTC on target day
+	time_t        nowTimet;            // Time this program is run
+	time_t        targetTimet;         // Midnight (00:00am) UTC on target day
 
-  unsigned long now2000;            // Days from 1/1/2000 to "now"
-  unsigned long target2000;         // Days from 1/1/2000 to "target"
+	unsigned long now2000;            // Days from 1/1/2000 to "now"
+	unsigned long target2000;         // Days from 1/1/2000 to "target"
 
-  OnOff         functionVersion;     // User wants program version number reported
-  OnOff         functionUsage;       // User wants program usage info reported
-  OnOff         functionReport;      // User wants a report generated
-  OnOff         functionList;        // User wants a list of sunrise or sunset times
-  OnOff         functionPoll;        // User wants a "NIGHT" or "DAY" return code/text
-  OnOff         functionWait;        // User wants the program to wait until sunrise or sunset
+	OnOff         functionVersion;     // User wants program version number reported
+	OnOff         functionUsage;       // User wants program usage info reported
+	OnOff         functionReport;      // User wants a report generated
+	OnOff         functionList;        // User wants a list of sunrise or sunset times
+	OnOff         functionPoll;        // User wants a "NIGHT" or "DAY" return code/text
+	OnOff         functionWait;        // User wants the program to wait until sunrise or sunset
 
-  OnOff         utc;                 // Printed output is in GMT/UTC (on) or localtime (off)
-  OnOff         debug;               // Is debug output required
+	OnOff         utc;                 // Printed output is in GMT/UTC (on) or localtime (off)
+	OnOff         debug;               // Is debug output required
 
-  OnOff         reportSunrise;       // Report sun rising
-  OnOff         reportSunset;        // Report sun setting
+	OnOff         reportSunrise;       // Report sun rising
+	OnOff         reportSunset;        // Report sun setting
+	OnOff         reportSolarnoon;     // Report solar noon
 
-  unsigned int  listDays;            // How many days should sunrise/set be listed for. (function: List)
+	unsigned int  listDays;            // How many days should sunrise/set be listed for. (function: List)
 
-  double        utcBiasHours;        // Add to UTC to get local-time (hours)
+	double        utcBiasHours;        // Add to UTC to get local-time (hours)
 
 } runStruct;
 
 typedef struct
-{ 
-  // "Input" data
-  double        twilightAngle;       // Degrees. -ve = below horizon. Can be: daylight, civil, nautical, astronomical, or custom.
-  unsigned long daysSince2000;       // The sunrise calculation needs this: days from start of 2000 to targetTimet
+{
+	// "Input" data
+	double        twilightAngle;       // Degrees. -ve = below horizon. Can be: daylight, civil, nautical, astronomical, or custom.
+	unsigned long daysSince2000;       // The sunrise calculation needs this: days from start of 2000 to targetTimet
 
-  // "Output" data
-  double        diurnalArc;          // Target day: The time it takes the sun to travel across the sky. "southHourUTC" is mid-way.
-  double        southHourUTC;        // Target day: Sun directly south - time (hours) from targetTimet (midnight, target Day UTC)
+	// "Output" data
+	double        diurnalArc;          // Target day: The time it takes the sun to travel across the sky. "southHourUTC" is mid-way.
+	double        southHourUTC;        // Target day: Sun directly south - time (hours) from targetTimet (midnight, target Day UTC)
 } targetStruct;
 
 #define EXIT_OK    0
@@ -79,13 +81,13 @@ typedef struct
 
 // Functions
 
-void myUtcTime   (const time_t * ptrTimet, struct tm * ptrTm);
-void myLocalTime (const time_t * ptrTimet, struct tm * ptrTm);
+void myUtcTime(const time_t* ptrTimet, struct tm* ptrTm);
+void myLocalTime(const time_t* ptrTimet, struct tm* ptrTm);
 
-OnOff isDay (const runStruct *pRun);
+OnOff isDay(const runStruct* pRun);
 
-int poll (const runStruct *pRun);
-int wait (const runStruct *pRun);
+int poll(const runStruct* pRun);
+int wait(const runStruct* pRun);
 
 
 #endif

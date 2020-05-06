@@ -11,6 +11,7 @@
 
 #include "sunwait.h"
 #include "print.h"
+#include <math.h>
 
 
 /* Sunrise/set is considered to occur when the Sun's upper limb (upper edge) is 50 arc minutes below the horizon */
@@ -36,23 +37,23 @@
 #define acosd(x)    (RADIAN_TO_DEGREE*acos(x))
 #define atan2d(y,x) (RADIAN_TO_DEGREE*atan2(y,x))
 
-#define PI 3.1415926535897932384
+#define PI M_PI
 
-void sunriset (const runStruct *pRun, targetStruct *pTarget);
-double revolution (const double x);
-double rev180 (const double x);
-double fixLongitude (const double x);
-double fixLatitude (const double x);
-double fix24 (const double x);
-double GMST0 (const double d);
-void sun_RA_dec (double d, double *RA, double *dec, double *r);
-unsigned long daysSince2000 (const time_t *pTimet);
+void sunriset(const runStruct* pRun, targetStruct* pTarget);
+double revolution(const double x);
+double rev180(const double x);
+double fixLongitude(const double x);
+double fixLatitude(const double x);
+double fix24(const double x);
+double GMST0(const double d);
+void sun_RA_dec(double d, double* RA, double* dec, double* r);
+unsigned long daysSince2000(const time_t* pTimet);
 
-long   myRound (const double d);
-long   myTrunc (const double d);
-double myAbs   (const double d);
+long   myRound(const double d);
+long   myTrunc(const double d);
+double myAbs(const double d);
 
-int hours   (const double d);
-int minutes (const double d);
+int hours(const double d);
+int minutes(const double d);
 
 #endif
