@@ -12,16 +12,16 @@
 #include "sunwait.h"
 #include "sunriset.h"
 
-void generate_report (const runStruct *pRun);
+void generate_report(const runStruct* pRun);
 
-void print_list (const runStruct *pRun);
+void print_list(const runStruct* pRun);
 
-double diurnalArcWithOffsetX (const double pDiurnalArc, const double pOffset);
-double diurnalArcWithOffset (const runStruct *pRun, const targetStruct *pTarget);
-double getOffsetRiseHourUTCX (const double pSouthHourUTC, const double pDiurnalArc, const double pOffsetHour);
-double getOffsetRiseHourUTC (const runStruct *pRun, const targetStruct *pTarget);
-double getOffsetSetHourUTCX  (const double pSouthHourUTC, const double pDiurnalArc, const double pOffsetHour);
-double getOffsetSetHourUTC  (const runStruct *pRun, const targetStruct *pTarget);
+double diurnalArcWithOffsetX(const double pDiurnalArc, const double pOffset);
+double diurnalArcWithOffset(const runStruct* pRun, const targetStruct* pTarget);
+double getOffsetRiseHourUTCX(const double pSouthHourUTC, const double pDiurnalArc, const double pOffsetHour);
+double getOffsetRiseHourUTC(const runStruct* pRun, const targetStruct* pTarget);
+double getOffsetSetHourUTCX(const double pSouthHourUTC, const double pDiurnalArc, const double pOffsetHour);
+double getOffsetSetHourUTC(const runStruct* pRun, const targetStruct* pTarget);
 
 
 #endif
