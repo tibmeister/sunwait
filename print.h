@@ -4,6 +4,7 @@
 // 08-12-2014  IFC  0.6  No changes from 0.5
 // 02-05-2015  IFC  0.7  No changes from 0.5, still
 // 2015-05-27  IFC  0.8  Resolve 'dodgy day' and cleanup
+// 2020-05-06  JLW  1.0  Code cleanup and some minor tweaks
 //
 
 #ifndef PRINT_H

@@ -28,12 +28,9 @@
 #define TWILIGHT_ANGLE_NAUTICAL     -12.0
 #define TWILIGHT_ANGLE_ASTRONOMICAL -18.0
 
-// Define our PI constant
-#define PI M_PI
-
 /* Some conversion factors between radians and degrees */
-#define RADIAN_TO_DEGREE (180.0 / PI)
-#define DEGREE_TO_RADIAN (PI / 180.0)
+#define RADIAN_TO_DEGREE (180.0 / M_PIl)
+#define DEGREE_TO_RADIAN (M_PIl / 180.0)
 
 /* The trigonometric functions in degrees */
 #define sind(x)      (sin((x)*DEGREE_TO_RADIAN))

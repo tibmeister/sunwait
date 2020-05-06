@@ -4,11 +4,12 @@
 **
 ** Who Ver   When        What
 ** IFC  0.5  04-12-2014  Fix my 1st release of sunwait for windows and port to
-*linux
+** linux
 ** IFC  0.6  08-12-2014  Add timezone for output of timings
 ** IFC  0.7  30-04-2015  Fix timexone and DST trouble - and problems near
-*dateline
+** dateline
 ** IFC  0.8  2015-05-27  Resolve 'dodgy day' and cleanup
+** 2020-05-06  JLW  1.0  Code cleanup and some minor tweaks
 **
 */
 

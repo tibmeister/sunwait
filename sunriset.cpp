@@ -13,6 +13,7 @@
 ** IFC  08-12-2014  0.6  Add timezone for output of timings
 ** IFC  29-04-2015  0.7  Fix for timezone (esp near date line) and more debug
 ** IFC  2015-05-27  0.8  Resolve 'dodgy day' and cleanup
+** 2020-05-06  JLW  1.0  Code cleanup and some minor tweaks
 **
 */
 

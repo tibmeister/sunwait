@@ -4,6 +4,7 @@
 // 08-12-2014  IFC  0.6  Add timezone handling for output, if required
 // 02-05-2015  IFC  0.7  Fix timezone and DST problems
 // 06-05-2015  IFC  0.8  Fix polar calculations
+// 2020-05-06  JLW  1.0  Code cleanup and some minor tweaks
 //
 
 #include <time.h>

@@ -3,7 +3,7 @@
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv CHANGE ME
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv CHANGE ME
-const double VERSION = 0.8; // <<<<<<<<< CHANGE ME
+const double VERSION = 1.0; // <<<<<<<<< CHANGE ME
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ CHANGE ME
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ CHANGE ME
 
@@ -21,6 +21,7 @@ const double VERSION = 0.8; // <<<<<<<<< CHANGE ME
 // IFC  2014-12-08  0.6  Add timezone handling for output - if required
 // IFC  2015-04-29  0.7  Timezone and DST fixes - and for date line timings
 // IFC  2015-05-27  0.8  Resolve 'dodgy day' and cleanup
+// 2020-05-06  JLW  1.0  Code cleanup and some minor tweaks
 //
 
 #include <cstring>
